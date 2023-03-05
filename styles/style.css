@@ -1,0 +1,366 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 思源;
+  src: url(../font/GenJyuuGothic-Medium.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 思源, DFKai-sb;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+}
+
+body div#background-wrap {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+@keyframes animateBubble {
+  0% {
+    margin-top: 1000px;
+  }
+  100% {
+    margin-top: -100%;
+  }
+}
+@keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 50px;
+  }
+}
+body div#background-wrap div.bubble {
+  border-radius: 50%;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgb(255, 255, 255);
+  height: 200px;
+  position: absolute;
+  width: 200px;
+}
+body div#background-wrap .x1 {
+  animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  left: -5%;
+  top: 5%;
+  transform: scale(0.6);
+}
+body div#background-wrap .x2 {
+  animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+  left: 5%;
+  top: 80%;
+  transform: scale(0.4);
+}
+body div#background-wrap .x3 {
+  animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  left: 10%;
+  top: 40%;
+  transform: scale(0.7);
+}
+body div#background-wrap .x4 {
+  animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+  left: 20%;
+  top: 0;
+  transform: scale(0.3);
+}
+body div#background-wrap .x5 {
+  animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+  left: 30%;
+  top: 50%;
+  transform: scale(0.5);
+}
+body div#background-wrap .x6 {
+  animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  left: 50%;
+  top: 0;
+  transform: scale(0.8);
+}
+body div#background-wrap .x7 {
+  animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  left: 65%;
+  top: 70%;
+  transform: scale(0.4);
+}
+body div#background-wrap .x8 {
+  animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+  left: 80%;
+  top: 10%;
+  transform: scale(0.3);
+}
+body div#background-wrap .x9 {
+  animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+  left: 90%;
+  top: 50%;
+  transform: scale(0.6);
+}
+body div#background-wrap .x10 {
+  animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  left: 80%;
+  top: 80%;
+  transform: scale(0.3);
+}
+body header {
+  background-color: white;
+  box-shadow: 0 10px 6px -6px #777;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+body header section.trueNav ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+@media screen and (max-width: 570px) {
+  body header section.trueNav ul {
+    flex-direction: column;
+  }
+}
+body header section.trueNav ul li {
+  list-style-type: none;
+}
+body header section.trueNav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+body header section.trueNav ul li a:hover {
+  color: #ffb6c1;
+}
+body section.blankNav ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+@media screen and (max-width: 570px) {
+  body section.blankNav ul {
+    flex-direction: column;
+  }
+}
+body section.blankNav ul li {
+  list-style-type: none;
+}
+body section.blankNav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+}
+body main section.top {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2.5rem;
+  max-height: 80vh;
+}
+body main section.top div.left {
+  flex: 1.5 1 500px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 1100px) {
+  body main section.top div.left {
+    justify-content: center;
+  }
+}
+body main section.top div.left div.inner h1 {
+  font-size: 4rem;
+}
+@media screen and (max-width: 580px) {
+  body main section.top div.left div.inner h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  body main section.top div.left div.inner h1 {
+    font-size: 2rem;
+  }
+}
+body main section.top div.left div.inner h3 {
+  font-weight: lighter;
+  padding: 0.2rem;
+}
+body main section.top div.left div.inner a {
+  display: inline-block;
+  margin: 2rem 0rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: white;
+  background-color: #ffb6c1;
+  border-radius: 100vh;
+  font-size: 1.2rem;
+}
+body main section.top div.right {
+  flex: 1 1 500px;
+}
+body main section.top div.right img {
+  display: block;
+  width: 75%;
+  max-width: 70vh;
+}
+@media screen and (max-width: 1110px) {
+  body main section.top div.right img {
+    max-width: 35vh;
+    margin: auto;
+  }
+}
+body main section.middle {
+  width: 100%;
+  background-color: #ffd9e6;
+  padding: 1.5rem;
+  max-height: 80vh;
+}
+body main section.middle h3 {
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+@media screen and (max-width: 350px) {
+  body main section.middle h3 {
+    font-size: 1.5rem;
+  }
+}
+body main section.middle p {
+  text-align: center;
+}
+body main section.middle p.one {
+  padding-bottom: 1rem;
+}
+body main section.middle div.progressbar h4 {
+  font-size: 1rem;
+}
+body main section.middle div.progressbar h4.one {
+  color: rgb(255, 166, 0);
+}
+body main section.middle div.progressbar h4.two {
+  color: rgb(134, 168, 255);
+}
+body main section.middle div.progressbar div.progress {
+  margin-bottom: 0.5rem;
+}
+body main section.middle div.progressbar div.progress-one {
+  --bs-progress-bg: white;
+  --bs-progress-bar-bg: rgb(255, 196, 87);
+}
+body main section.middle div.progressbar div.progress-two {
+  --bs-progress-bg: white;
+  --bs-progress-bar-bg: rgb(134, 168, 255);
+}
+body main section.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+body main section.bottom section.table {
+  flex: 2 1 700px;
+  padding: 1rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+}
+body main section.bottom section.table table {
+  width: 100%;
+  min-width: 600px;
+}
+body main section.bottom section.table table ul {
+  padding-left: 1.2rem;
+}
+body main section.bottom section.table table tr:nth-child(1) {
+  border-top: 2px solid;
+  border-color: #fb9aa9;
+}
+body main section.bottom section.table table tr {
+  border-bottom: 2px solid;
+  border-color: #fb9aa9;
+  transition: all 0.2s ease;
+}
+body main section.bottom section.table table tr:hover {
+  background-color: #ffd9e6;
+  color: white;
+}
+body main section.bottom section.table table td {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+body main section.bottom section.picture {
+  flex: 1 1 500px;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+body main section.bottom section.picture img {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+@media screen and (max-width: 1260px) {
+  body main section.bottom section.picture img {
+    width: 30%;
+  }
+}
+body main section.bottom section.picture div.rect1 {
+  border: 10px solid rgb(255, 235, 212);
+  width: 40vw;
+  height: 15vw;
+  position: absolute;
+  top: 0px;
+  left: -50px;
+  z-index: -1;
+}
+@media screen and (max-width: 1260px) {
+  body main section.bottom section.picture div.rect1 {
+    width: 80vw;
+  }
+}
+body main section.bottom section.picture div.rect2 {
+  border: 10px solid rgb(255, 235, 212);
+  width: 15vw;
+  height: 40vw;
+  position: absolute;
+  top: 30px;
+  left: 220px;
+  z-index: -1;
+}
+@media screen and (max-width: 1260px) {
+  body main section.bottom section.picture div.rect2 {
+    height: 80vw;
+  }
+}
+body main section.bottom section.picture div.rect3 {
+  border: 10px solid rgb(255, 235, 212);
+  width: 40vw;
+  height: 15vw;
+  position: absolute;
+  top: 300px;
+  left: 100px;
+  z-index: -1;
+}
+@media screen and (max-width: 1260px) {
+  body main section.bottom section.picture div.rect3 {
+    width: 80vw;
+    top: 80px;
+    left: 100px;
+  }
+}/*# sourceMappingURL=style.css.map */
